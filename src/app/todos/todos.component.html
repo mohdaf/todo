@@ -8,12 +8,12 @@
   <li 
     *ngFor="let todo of todos"
     class="list-group-item">
-    {{ todo.title }}
+    <strong>{{ todo.title }}</strong>
     <button 
       (click)="deleteTodo(post)"
-      class="btn btn-danger float-right">Delete</button>
+      class="btn btn-danger float-right" style="margin-left: 2px;">Delete</button>
     <button 
       (click)="editTodo(post)"
-      class="btn btn-info float-right">View/Edit</button>
+      class="btn btn-info float-right" style="margin-right: 2px;">View/Edit</button>
   </li>
 </ul>

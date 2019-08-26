@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TodoService {
 
-  private _todosUrl = "https://todo-backend.modaf.xyz/api/todo/";
+  private _todosUrl = "https://todo-backend.modaf.xyz/api/todo/todo/";
 
   constructor(private http: HttpClient) { }
 
