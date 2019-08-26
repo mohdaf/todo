@@ -15,7 +15,7 @@
       (click)="deleteTodo(todo)"
       class="btn btn-danger float-right" style="margin-left: 2px;">Delete</button>
     <button 
-      (click)="editTodo(todo)"
+      [routerLink]="['/todo', todo.id]"
       class="btn btn-info float-right" style="margin-right: 2px;">View/Edit</button>
   </li>
 </ul>

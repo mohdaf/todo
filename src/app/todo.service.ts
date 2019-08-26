@@ -14,8 +14,16 @@ export class TodoService {
     return this.http.get<any>(this._todosUrl);
   }
 
+  getTodo(todo_id) {
+    return this.http.get<any>(this._todosUrl + todo_id + '/');
+  }
+
   create(todo) {
     return this.http.post<any>(this._todosUrl, todo);
+  }
+
+  update(todo) {
+    return this.http.patch<any>(this._todosUrl + todo.id + '/' ,todo);
   }
 
   delete(todo_id) {

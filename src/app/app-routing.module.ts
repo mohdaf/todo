@@ -19,8 +19,9 @@ const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
-    path: 'todo',
-    component: TodoComponent
+    path: 'todo/:id',
+    component: TodoComponent,
+    canActivate: [AuthGuard]
   },
   {
     path: 'login',
