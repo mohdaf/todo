@@ -1,1 +1,19 @@
-<p>todos works!</p>
+<input 
+  (keyup.enter)="createTodo(title)" #title
+  type="text" class="form-control"
+  placeholder="Enter todo title then press enter"
+  style="margin: 35px;">
+
+<ul class="list-group" style="margin: 35px;">
+  <li 
+    *ngFor="let todo of todos"
+    class="list-group-item">
+    {{ todo.title }}
+    <button 
+      (click)="deleteTodo(post)"
+      class="btn btn-danger float-right">Delete</button>
+    <button 
+      (click)="editTodo(post)"
+      class="btn btn-info float-right">View/Edit</button>
+  </li>
+</ul>

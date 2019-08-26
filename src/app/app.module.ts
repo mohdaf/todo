@@ -10,6 +10,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { TodosComponent } from './todos/todos.component';
 import { TodoComponent } from './todo/todo.component';
+import { TodoService } from './todo.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TodoComponent } from './todo/todo.component';
     HttpClientModule
   ],
   providers: [
-    AuthService
+    AuthService,
+    TodoService
   ],
   bootstrap: [AppComponent]
 })
