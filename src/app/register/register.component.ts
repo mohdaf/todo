@@ -10,8 +10,14 @@ import { Router } from '@angular/router'
 export class RegisterComponent implements OnInit {
 
   registerUserData = {};
+  showSuccess;
+  showError;
+
   constructor(private _auth: AuthService,
-              private _router: Router) { }
+              private _router: Router) { 
+                this.showSuccess = false;
+                this.showError = false;
+              }
 
   ngOnInit() {
   }
@@ -20,9 +26,14 @@ export class RegisterComponent implements OnInit {
     this._auth.registerUser(this.registerUserData)
     .subscribe(
       res => {
-        this._router.navigate(['/login']);
+        this.showError = false;
+        this.showSuccess = true;
       },
-      err => console.log(err)
+      err => {
+        this.showSuccess = false;
+        this.showError = true;
+        console.log(err);
+      }
     )      
   }
 

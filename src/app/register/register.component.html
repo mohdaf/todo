@@ -29,6 +29,12 @@
               <button type="button" (click)="registerUser()" class="btn btn-primary float-right">Register</button>
             </form>
           </div>
+          <div *ngIf="showSuccess" class="alert alert-success">
+            <strong>Registeration Succeed!</strong> Now you can <a class="nav-link"  routerLink="/login" routerLinkActive="active">Login</a>
+          </div>
+          <div *ngIf="showError" class="alert alert-danger">
+            <strong>Failure!</strong> Error Occured.
+          </div>
           <!--/card-block-->
         </div>
         <!-- /form card login -->
