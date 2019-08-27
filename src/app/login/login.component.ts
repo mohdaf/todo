@@ -11,10 +11,11 @@ import { Router } from '@angular/router'
 })
 export class LoginComponent implements OnInit {
 
-  loginUserData = {}
+  loginUserData ;
   showError;
   constructor(private _auth: AuthService,
               private _router: Router) {
+                this.loginUserData = {};
                 this.showError = false;
                }
 

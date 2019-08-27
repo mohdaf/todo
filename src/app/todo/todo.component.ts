@@ -9,11 +9,12 @@ import { HttpErrorResponse } from '@angular/common/http';
   styleUrls: ['./todo.component.css']
 })
 export class TodoComponent implements OnInit {
-  todo = {};
+  todo;
   showError;
   constructor(private route: ActivatedRoute, private _todoService: TodoService,
     private _router: Router) {
       this.showError = false;
+      this.todo = {};
      }
 
   ngOnInit() {

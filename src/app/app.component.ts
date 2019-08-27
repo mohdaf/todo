@@ -8,5 +8,5 @@ import { AuthService } from './auth.service';
 })
 export class AppComponent {
   title = 'todo';
-  constructor(private _authService: AuthService){}
+  constructor(public _authService: AuthService){}
 }

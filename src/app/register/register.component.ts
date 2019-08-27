@@ -9,12 +9,13 @@ import { Router } from '@angular/router'
 })
 export class RegisterComponent implements OnInit {
 
-  registerUserData = {};
+  registerUserData ;
   showSuccess;
   showError;
 
   constructor(private _auth: AuthService,
               private _router: Router) { 
+                this.registerUserData = {};
                 this.showSuccess = false;
                 this.showError = false;
               }
